@@ -16,7 +16,6 @@ try{
 
     //set up the products
 
-    $microwave = new Microwave();
 
 
     //create a console item and sets it's price
@@ -71,6 +70,13 @@ try{
 
     //add the second television to the shopping cart
     array_push($cart, $television);
+
+    //create a microwave item and set its price
+    $microwave = new Microwave();
+    $microwave->setPrice(99.99);
+
+    //add the microwave to the shopping cart
+    array_push($cart,$microwave);
 
     //add all the extra items (controllers) to the shopping cart
     foreach($cart as $electronic_item){
