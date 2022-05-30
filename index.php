@@ -80,9 +80,12 @@ try{
 
     //add all the extra items (controllers) to the shopping cart
     foreach($cart as $electronic_item){
-        foreach($electronic_item->getExtras() as $extra){
-            array_push($cart, $extra);
+        if($electronic_item->type == 'console' || $electronic_item->type == 'television'){
+            foreach($electronic_item->getExtras() as $extra){
+                array_push($cart, $extra);
+            }
         }
+        
     }
 
 
